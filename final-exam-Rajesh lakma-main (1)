@@ -1,0 +1,103 @@
+Access the assignment repository from the provided GitHub Classroom link.
+Clone the repository to your local machine and review the existing codebase to understand its structure and functionality.
+2. Create a New Component
+Component Creation: Add a new component to the existing project. If the project is built using React, for example, you would create a new .js or .jsx file for the component.
+Example: If you’re working with React, create a new file named NewComponent.js in the src/components directory.
+jsx
+Copy code
+// src/components/NewComponent.js
+import React from 'react';
+
+const NewComponent = () => {
+    return (
+        <div>
+            <h2>This is the New Component</h2>
+        </div>
+    );
+};
+
+export default NewComponent;
+3. Include the New Component in the Current Tab
+Update Tab Component: Modify the existing tab component to include the new component. This typically involves importing the new component and including it in the render method or JSX return statement.
+Example: If there is a tab component named CurrentTab.js, update it as follows:
+jsx
+Copy code
+// src/components/CurrentTab.js
+import React from 'react';
+import NewComponent from './NewComponent';
+
+const CurrentTab = () => {
+    return (
+        <div>
+            <h1>Current Tab</h1>
+            <NewComponent />
+        </div>
+    );
+};
+
+export default CurrentTab;
+4. Create a New Tab
+New Tab Component: Create a new tab that will hold the components from the old tab. Create a new file for this tab component.
+Example: Create a new file named NewTab.js:
+jsx
+Copy code
+// src/components/NewTab.js
+import React from 'react';
+import OldComponent from './OldComponent'; // Replace with actual components
+
+const NewTab = () => {
+    return (
+        <div>
+            <h1>New Tab</h1>
+            <OldComponent /> {/* Include all relevant old components here */}
+        </div>
+    );
+};
+
+export default NewTab;
+5. Update Routing or Navigation (if applicable)
+Modify Navigation: Update the routing or navigation component to include the new tab. Ensure that users can navigate to both the old and new tabs.
+Example: If using React Router, update the routes:
+jsx
+Copy code
+// src/App.js or src/routes.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CurrentTab from './components/CurrentTab';
+import NewTab from './components/NewTab';
+
+function App() {
+    return (
+        <Router>
+            <Switch>
+                <Route path="/current" component={CurrentTab} />
+                <Route path="/new" component={NewTab} />
+            </Switch>
+        </Router>
+    );
+}
+
+export default App;
+6. Documentation and Comments
+Code Documentation: Ensure that all new code includes comments explaining its purpose and functionality.
+Update Readme: Modify the README.md file to include information about the new component and tab. Explain any changes made to the project structure.
+7. Testing
+Test New Functionality: Validate that the new component and tab function as expected. Perform manual testing or write unit tests if applicable.
+Example: If using Jest for testing, add tests for the new component and tab.
+8. Final Review and Submission
+Review Code: Ensure that the code is well-organized, with clear naming conventions and documentation.
+Push Changes: Commit your changes and push them to the GitHub repository.
+Submit: Follow the submission guidelines on GitHub Classroom to submit your assignment.
+Grading Criteria Alignment
+Functionality: Ensure that the new component and tab work correctly and integrate seamlessly with the existing application.
+Documentation: Provide clear comments and update the README with relevant details about your changes.
+Organization: Organize code into components and ensure it is divided logically into files and folders.
+By following these steps, you'll ensure that your assignment meets the criteria and is submitted effectively.
+
+
+
+
+Don't share sensitive info. Chats may be reviewed and used to train our models. Learn more
+
+
+ChatGPT can make mistakes. Check important info.
